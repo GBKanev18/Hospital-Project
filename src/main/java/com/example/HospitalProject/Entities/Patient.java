@@ -1,18 +1,15 @@
 package com.example.HospitalProject.Entities;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table
-public class Doctor {
+public class Patient {
 
     @Id
     @Column
-    private int doctor_id;
+    private int patient_id;
 
     @Column
     private String first_name;
@@ -21,26 +18,26 @@ public class Doctor {
     private String last_name;
 
     @Column
-    private String speciality;
+    private int age;
 
-    public Doctor(int doctor_id, String first_name, String last_name, String speciality) {
-        this.doctor_id = doctor_id;
+    public Patient(int patient_id, String first_name, String last_name, int age) {
+        this.patient_id = patient_id;
         this.first_name = first_name;
         this.last_name = last_name;
-        this.speciality = speciality;
+        this.age = age;
     }
 
-    public Doctor() {
+    public Patient() {
 
     }
 
 
-    public int getDoctor_id() {
-        return doctor_id;
+    public int getPatient_id() {
+        return patient_id;
     }
 
-    public void setDoctor_id(int doctor_id) {
-        this.doctor_id = doctor_id;
+    public void setPatient_id(int patient_id) {
+        this.patient_id = patient_id;
     }
 
     public String getFirst_name() {
@@ -59,11 +56,11 @@ public class Doctor {
         this.last_name = last_name;
     }
 
-    public String getSpeciality() {
-        return speciality;
+    public int getAge() {
+        return age;
     }
 
-    public void setSpeciality(String speciality) {
-        this.speciality = speciality;
+    public void setAge(int age) {
+        this.age = age;
     }
 }
